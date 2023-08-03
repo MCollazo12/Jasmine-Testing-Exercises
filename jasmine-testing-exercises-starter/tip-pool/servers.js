@@ -14,14 +14,18 @@ function submitServerInfo(evt) {
 
   let serverName = serverNameInput.value;
 
-  if (serverName !== '') {
+  if (serverName !== '' && isLettersOnly(serverName)) {
     serverId++;
+
     allServers['server' + serverId] = { serverName };
-
+    
     updateServerTable();
-
     serverNameInput.value = '';
   }
+}
+
+function isLettersOnly(serverName) {
+  return /^[A-Za-z]+$/.test(serverName);
 }
 
 // Create table row element and pass to appendTd function with input value
