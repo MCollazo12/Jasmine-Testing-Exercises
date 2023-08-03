@@ -1,4 +1,4 @@
-describe('Servers test (with setup and tear-down)', function () {
+describe('Utilities test (with setup and tear-down)', () => {
   beforeEach(() => {
     // initialization logic
     serverNameInput.value = 'Alice';
@@ -17,14 +17,14 @@ describe('Servers test (with setup and tear-down)', function () {
       submitServerInfo();
 
       expect(Object.keys(allServers).length).toEqual(0);
-    })
+    });
 
     it('should not allow characters', () => {
       serverNameInput.value = '#';
       submitServerInfo();
 
       expect(Object.keys(allServers).length).toEqual(0);
-    })
+    });
   });
 
   describe('updateServerTable tests', () => {
@@ -68,5 +68,6 @@ describe('Servers test (with setup and tear-down)', function () {
     serverTbody.textContent = '';
     serverId = 0;
     allServers = {};
+    
   });
 });
