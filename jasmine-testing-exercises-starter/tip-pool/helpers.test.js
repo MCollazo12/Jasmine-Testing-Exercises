@@ -29,20 +29,24 @@ describe('Helper utilities test', () => {
     });
   });
 
-    describe('appendTd tests', () => {
-        it('should append a new td to the summary table', () => {
-            const tableRow = document.createElement('tr');
-            appendTd(tableRow, '20');
+  describe('appendTd tests', () => {
+    it('should append a new td to the summary table', () => {
+      const tableRow = document.createElement('tr');
+      appendTd(tableRow, '20');
 
-            expect(tableRow.children.length).toBe(1);
-            expect(tableRow.children[0].textContent).toEqual('20')
-      })
+      expect(tableRow.children.length).toBe(1);
+      expect(tableRow.children[0].textContent).toEqual('20');
+    });
   });
 
   afterEach(() => {
     billAmtInput.value = '';
     tipAmtInput.value = '';
     paymentTbody.textContent = '';
+    summaryTds[0].innerHTML = '';
+    summaryTds[1].innerHTML = '';
+    summaryTds[2].innerHTML = '';
+    serverTbody.innerHTML = '';
     allPayments = {};
     paymentId = 0;
   });

@@ -1,4 +1,4 @@
-describe('Utilities test (with setup and tear-down)', () => {
+describe('Server Utilities tests', () => {
   beforeEach(() => {
     // initialization logic
     serverNameInput.value = 'Alice';

@@ -3,8 +3,8 @@
 function sumPaymentTotal(type) {
   let total = 0;
 
-  for (let key in allPayments) {
-    let payment = allPayments[key];
+  for (let paymentId in allPayments) {
+    let payment = allPayments[paymentId];
 
     total += Number(payment[type]);
   }
