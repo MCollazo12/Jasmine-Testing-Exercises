@@ -22,7 +22,7 @@ describe('Helper utilities test', () => {
   });
 
   describe('calculateTipPercent tests', () => {
-    it('should calculate tip percent correctly ', function () {
+    it('should calculate tip percent correctly ', () => {
       expect(calculateTipPercent(100, 20)).toEqual(20);
       expect(calculateTipPercent(57, 10)).toEqual(18);
       expect(calculateTipPercent(25, 4)).toEqual(16);
@@ -36,6 +36,16 @@ describe('Helper utilities test', () => {
 
       expect(tableRow.children.length).toBe(1);
       expect(tableRow.children[0].textContent).toEqual('20');
+    });
+  });
+
+  describe('appendDeleteBtn', () => {
+    it('it should generate and append a delete button tr', () => {
+      let tr = document.createElement('tr');
+      appendDeleteBtn(tr);
+
+      expect(tr.children.length).toEqual(1);
+      expect(tr.innerText).toEqual('X');
     });
   });
 

@@ -35,9 +35,10 @@ describe('Server Utilities tests', () => {
         '#serverTable tbody tr td'
       );
 
-      expect(serverTableRow.length).toEqual(2);
+      expect(serverTableRow.length).toEqual(3);
       expect(serverTableRow[0].textContent).toBe('Alice');
       expect(serverTableRow[1].textContent).toBe('$0.00');
+      expect(serverTableRow[2].textContent).toBe('X');
     });
 
     it('should append multiple rows for each server', () => {
@@ -56,10 +57,13 @@ describe('Server Utilities tests', () => {
 
       expect(serverTableRow[0].textContent).toBe('Alice');
       expect(serverTableRow[1].textContent).toBe('$0.00');
-      expect(serverTableRow[2].textContent).toBe('Mike');
-      expect(serverTableRow[3].textContent).toBe('$0.00');
-      expect(serverTableRow[4].textContent).toBe('Steve');
-      expect(serverTableRow[5].textContent).toBe('$0.00');
+      expect(serverTableRow[2].textContent).toBe('X');
+      expect(serverTableRow[3].textContent).toBe('Mike');
+      expect(serverTableRow[4].textContent).toBe('$0.00');
+      expect(serverTableRow[5].textContent).toBe('X');
+      expect(serverTableRow[6].textContent).toBe('Steve');
+      expect(serverTableRow[7].textContent).toBe('$0.00');
+      expect(serverTableRow[8].textContent).toBe('X');
     });
   });
 

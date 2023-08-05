@@ -58,10 +58,11 @@ describe('Payments Utilities test', () => {
       expect(paymentRows.length).toEqual(1);
 
       const paymentRow = paymentRows[0];
-      expect(paymentRow.children.length).toEqual(3);
+      expect(paymentRow.children.length).toEqual(4);
       expect(paymentRow.children[0].innerText).toEqual('$200');
       expect(paymentRow.children[1].innerText).toEqual('$40');
       expect(paymentRow.children[2].innerText).toEqual('20%');
+      expect(paymentRow.children[3].innerText).toEqual('X');
     });
   });
 
